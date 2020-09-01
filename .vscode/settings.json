@@ -1,0 +1,15 @@
+{
+	// For ESLint
+	"eslint.validate": ["svelte", "json", "jsonc"],
+	"editor.codeActionsOnSave": {
+		"source.fixAll": true
+	},
+	// For Prettier
+	"editor.formatOnSave": true,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"prettier.requireConfig": true,
+	// Svelte for VS Code
+	"[svelte]": {
+		"editor.defaultFormatter": "svelte.svelte-vscode"
+	}
+}
