@@ -28,7 +28,7 @@ To create a new project based on this template using
 [degit](https://github.com/Rich-Harris/degit):
 
 ```bash
-npx degit NicoCevalos/svelte-template svelte-app
+npx degit NicoCevallos/svelte-template svelte-app
 cd svelte-app
 ```
 

@@ -1,6 +1,6 @@
 {
 	// For ESLint
-	"eslint.validate": ["svelte", "json", "jsonc"],
+	"eslint.validate": ["json", "jsonc", "svelte"],
 	"editor.codeActionsOnSave": {
 		"source.fixAll": true
 	},

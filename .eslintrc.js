@@ -1,5 +1,6 @@
 const eslintSveltePreprocess = require("eslint-svelte3-preprocess");
-const svelteConfig = require("./svelte.config");
+const path = require("path");
+const svelteConfigPath = path.resolve("./svelte.config");
 
 module.exports = {
 	root: true,
@@ -30,6 +31,7 @@ module.exports = {
 		},
 	],
 	settings: {
-		"svelte3/preprocess": eslintSveltePreprocess(svelteConfig.preprocess),
+		"svelte3/preprocess": eslintSveltePreprocess(svelteConfigPath),
+		//"svelte3/preprocess": eslintSveltePreprocess(),
 	},
 };

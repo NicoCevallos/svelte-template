@@ -1,8 +1,17 @@
 diff --git a/node_modules/prettier/third-party.js b/node_modules/prettier/third-party.js
-index 1e4292b..acb7bbd 100644
+index 5f1ac8e..b22d6cc 100644
 --- a/node_modules/prettier/third-party.js
 +++ b/node_modules/prettier/third-party.js
-@@ -9684,7 +9684,7 @@ var readFile_1 = createCommonjsModule(function (module, exports) {
+@@ -9660,7 +9660,7 @@ var readFile_1 = createCommonjsModule(function (module, exports) {
+       const content = await fsReadFileAsync(filepath, 'utf8');
+       return content;
+     } catch (error) {
+-      if (throwNotFound === false && error.code === 'ENOENT') {
++      if (throwNotFound === false && error.code === 'ENOENT' || error.code === "ENOTDIR") {
+         return null;
+       }
+ 
+@@ -9676,7 +9676,7 @@ var readFile_1 = createCommonjsModule(function (module, exports) {
  
        return content;
      } catch (error) {
@@ -11,7 +20,7 @@ index 1e4292b..acb7bbd 100644
          return null;
        }
  
-@@ -9755,7 +9755,7 @@ function isTypeSync(fsStatType, statsMethodName, filePath) {
+@@ -9747,7 +9747,7 @@ function isTypeSync(fsStatType, statsMethodName, filePath) {
    try {
      return fs__default['default'][fsStatType](filePath)[statsMethodName]();
    } catch (error) {

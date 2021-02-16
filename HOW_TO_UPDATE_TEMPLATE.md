@@ -51,13 +51,13 @@ npx sort-package-json
 git add . && git commit -m "updated template"
 ```
 
-8. Rebase to `master` to join changes to the history
+8. Rebase to your branch to join changes to the history
 
 ```zsh
-git rebase master
+git rebase <your-branch>
 ```
 
-9. Finally checkout to your branch and merge changes (example using master)
+9. Finally checkout to your branch and merge changes
 
 ```zsh
 git checkout <your-branch> && git merge template-master
@@ -66,5 +66,5 @@ git checkout <your-branch> && git merge template-master
 10. And delete temporary branch after resolve your conflicts
 
 ```zsh
-git merge template-master
+git branch -D template-master
 ```
